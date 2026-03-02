@@ -1,68 +1,38 @@
 <!--
-
-  Author  : Mochammad Henry Alifian
-  Course  : Web Programming (PWeb) — Task 1
-  Date    : March 2025
-  Stack   : HTML5 + CSS3 
-  Semantic Structure:
-    <nav>      — Sticky navigation bar with anchor links
-    <header>   — Profile header (photo, name, contact, dream job)
-    <main>     — Primary content wrapper
-      <section>  — About, Education, Experience, FP Plan, Awards, Skills
-      <article>  — Individual project/experience entries
-    <footer>   — Contact links and copyright
-
-  Accessibility:
-    - ARIA labels on interactive elements
-    - Descriptive alt text on images
-    - role="list" on semantic groupings
-    - Keyboard-navigable anchor links
-
-  File Dependencies:
-    - style.css          → All visual styling and responsive rules
-    - img/icons/*.svg    → Custom icon assets (13 icons)
-    - img/image copy.png → Profile photograph
-
-  ==========================================================================
+  Author : Mochammad Henry Alifian
+  Course : Web Programming (PWeb) — Task 1
+  Date   : March 2025
+  Stack  : HTML5 + CSS3
 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO Meta -->
   <meta name="description"
         content="CV of Mochammad Henry Alifian — AI & Robotics Research Engineer, Artificial Intelligence Engineering student at Institut Teknologi Sepuluh Nopember (ITS), Surabaya.">
   <meta name="keywords"
         content="CV, Mochammad Henry Alifian, AI Engineer, Robotics, ITS, Portfolio, Resume">
   <meta name="author" content="Mochammad Henry Alifian">
-
   <title>Mochammad Henry Alifian — CV</title>
 
-  <!-- Google Fonts: Inter (body) + Outfit (headings) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
         rel="stylesheet">
 
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ============================================================
-       NAVIGATION
-       Sticky top bar with logo + anchor links to each CV section.
-       Mobile: collapses into a hamburger toggle (JS at bottom).
-       ============================================================ -->
+  <!-- Navigation -->
   <nav id="navbar" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#top" class="nav-logo" aria-label="Back to top">MHA</a>
 
-      <button class="nav-toggle"
-              id="navToggle"
+      <button class="nav-toggle" id="navToggle"
               aria-label="Toggle navigation menu"
               aria-expanded="false"
               aria-controls="navLinks">
@@ -83,32 +53,22 @@
     </div>
   </nav>
 
-
-  <!-- ============================================================
-       HEADER — Profile
-       Contains photo, full name, professional title, contact info,
-       and dream job statement with a highlighted callout.
-       ============================================================ -->
+  <!-- Header: profile photo, name, contact details, dream job -->
   <header id="top" class="cv-header">
     <div class="container header-grid">
 
-      <!-- Profile Photo -->
       <div class="header-photo">
-        <img src="img/image copy.png"
-             alt="Portrait of Mochammad Henry Alifian wearing ITS Robocon team uniform"
-             class="photo"
-             width="120"
-             height="120">
+        <img src="img/profile.png"
+             alt="Portrait of Mochammad Henry Alifian"
+             class="photo" width="120" height="120">
       </div>
 
-      <!-- Profile Information -->
       <div class="header-info">
         <h1 class="header-name">MOCHAMMAD HENRY ALIFIAN</h1>
         <p class="header-title">
           Engineer · AI &amp; Robotics Research Engineer · Intelligent Systems Developer
         </p>
 
-        <!-- Contact Row -->
         <address class="header-meta" aria-label="Contact information">
           <span class="meta-item">
             <img src="img/icons/email.svg" alt="" class="meta-icon" aria-hidden="true">
@@ -121,12 +81,10 @@
           <span class="meta-item">
             <img src="img/icons/linkedin.svg" alt="" class="meta-icon" aria-hidden="true">
             <a href="https://www.linkedin.com/in/mochammad-henry-alifian-717886326/"
-               target="_blank"
-               rel="noopener noreferrer">LinkedIn</a>
+               target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </span>
         </address>
 
-        <!-- Dream Job Callout -->
         <div class="header-dream" role="note">
           <img src="img/icons/target.svg" alt="" class="meta-icon" aria-hidden="true">
           <span>
@@ -140,15 +98,9 @@
     </div>
   </header>
 
-
-  <!-- ============================================================
-       MAIN CONTENT
-       All CV sections live inside <main> for semantic correctness.
-       Each section has an id for in-page navigation.
-       ============================================================ -->
   <main class="container">
 
-    <!-- ── About ────────────────────────────────────────────── -->
+    <!-- About -->
     <section id="about" class="cv-section" aria-labelledby="heading-about">
       <h2 class="section-heading" id="heading-about">About Me</h2>
       <p class="body-text">
@@ -162,10 +114,9 @@
       </p>
     </section>
 
-
-    <!-- ── Education ────────────────────────────────────────── -->
-    <section id="education" class="cv-section" aria-labelledby="heading-education">
-      <h2 class="section-heading" id="heading-education">Education</h2>
+    <!-- Education -->
+    <section id="education" class="cv-section" aria-labelledby="heading-edu">
+      <h2 class="section-heading" id="heading-edu">Education</h2>
 
       <article class="entry">
         <div class="entry-header">
@@ -204,40 +155,24 @@
       </article>
     </section>
 
-
-    <!-- ── Professional Experience & Projects ───────────────── -->
-    <section id="experience" class="cv-section" aria-labelledby="heading-experience">
-      <h2 class="section-heading" id="heading-experience">
+    <!-- Experience & Projects -->
+    <section id="experience" class="cv-section" aria-labelledby="heading-exp">
+      <h2 class="section-heading" id="heading-exp">
         Professional Experience &amp; Projects
       </h2>
 
-      <!-- 1 — TB Screening System -->
-      <article clas s="entry">
+      <article class="entry">
         <div class="entry-header">
           <div>
             <h3 class="entry-title">AI-Driven Tuberculosis Screening System</h3>
-            <p class="entry-subtitle">
-              Lead IoT Engineer &amp; Signal Processing Specialist
-            </p>
+            <p class="entry-subtitle">Lead IoT Engineer &amp; Signal Processing Specialist</p>
           </div>
           <time class="entry-date" datetime="2025-08">August 2025 — Present</time>
         </div>
         <ul class="entry-list">
-          <li>
-            Designed and implemented the IoT architecture using
-            <strong>ESP32</strong> and <strong>Raspberry Pi</strong>
-            for real-time acoustic data acquisition.
-          </li>
-          <li>
-            Developed signal processing algorithms for
-            <strong>Direction of Arrival (DoA)</strong> and
-            <strong>Beamforming</strong> to localize and isolate
-            tuberculosis-indicative cough patterns in public spaces.
-          </li>
-          <li>
-            Integrated high-precision <strong>MEMS</strong> microphone arrays
-            for spatial surveillance and surveillance-based diagnostics.
-          </li>
+          <li>Designed and implemented the IoT architecture using <strong>ESP32</strong> and <strong>Raspberry Pi</strong> for real-time acoustic data acquisition.</li>
+          <li>Developed signal processing algorithms for <strong>Direction of Arrival (DoA)</strong> and <strong>Beamforming</strong> to localize and isolate tuberculosis-indicative cough patterns in public spaces.</li>
+          <li>Integrated high-precision <strong>MEMS</strong> microphone arrays for spatial surveillance-based diagnostics.</li>
         </ul>
         <div class="entry-tags" aria-label="Technologies used">
           <span class="tag">ESP32</span>
@@ -249,7 +184,6 @@
         </div>
       </article>
 
-      <!-- 2 — Swerve Robot -->
       <article class="entry">
         <div class="entry-header">
           <div>
@@ -258,18 +192,8 @@
           </div>
         </div>
         <ul class="entry-list">
-          <li>
-            Authored:
-            <em>"Comparative Study of Genetic Algorithm-Based Rule Optimization
-            in Mamdani, Sugeno, and Tsukamoto Fuzzy Controllers for Swerve
-            Robot Position Control"</em>.
-          </li>
-          <li>
-            Developed a <strong>ROS2</strong> simulation for a 4-Swerve Drive
-            robot with <strong>Fuzzy Logic Controllers</strong> optimized using
-            <strong>Grey Wolf Optimizer (GWO)</strong> and
-            <strong>Genetic Algorithm (GA)</strong>.
-          </li>
+          <li>Authored: <em>"Comparative Study of Genetic Algorithm-Based Rule Optimization in Mamdani, Sugeno, and Tsukamoto Fuzzy Controllers for Swerve Robot Position Control"</em>.</li>
+          <li>Developed a <strong>ROS2</strong> simulation for a 4-Swerve Drive robot with <strong>Fuzzy Logic Controllers</strong> optimized using <strong>Grey Wolf Optimizer (GWO)</strong> and <strong>Genetic Algorithm (GA)</strong>.</li>
         </ul>
         <div class="entry-tags" aria-label="Technologies used">
           <span class="tag">ROS2</span>
@@ -279,7 +203,6 @@
         </div>
       </article>
 
-      <!-- 3 — X-LoRA LLM Research -->
       <article class="entry">
         <div class="entry-header">
           <div>
@@ -288,15 +211,8 @@
           </div>
         </div>
         <ul class="entry-list">
-          <li>
-            Implemented <strong>Mixture of Low-Rank Adapter Experts (X-LoRA)</strong>
-            architecture for cross-lingual adaptation (English-Indonesian)
-            using <strong>Qwen2.5-0.5B</strong>.
-          </li>
-          <li>
-            Evaluated model performance in low-resource language scenarios
-            to improve linguistic transfer efficiency.
-          </li>
+          <li>Implemented <strong>Mixture of Low-Rank Adapter Experts (X-LoRA)</strong> architecture for cross-lingual adaptation (English-Indonesian) using <strong>Qwen2.5-0.5B</strong>.</li>
+          <li>Evaluated model performance in low-resource language scenarios to improve linguistic transfer efficiency.</li>
         </ul>
         <div class="entry-tags" aria-label="Technologies used">
           <span class="tag">X-LoRA</span>
@@ -306,7 +222,6 @@
         </div>
       </article>
 
-      <!-- 4 — NEAT Racing Simulation -->
       <article class="entry">
         <div class="entry-header">
           <div>
@@ -315,14 +230,8 @@
           </div>
         </div>
         <ul class="entry-list">
-          <li>
-            Implemented <strong>NeuroEvolution of Augmenting Topologies (NEAT)</strong>
-            to evolve neural network architectures for autonomous racing agents.
-          </li>
-          <li>
-            Optimized agent behavior through evolutionary algorithms,
-            focusing on real-time decision-making and pathfinding.
-          </li>
+          <li>Implemented <strong>NeuroEvolution of Augmenting Topologies (NEAT)</strong> to evolve neural network architectures for autonomous racing agents.</li>
+          <li>Optimized agent behavior through evolutionary algorithms, focusing on real-time decision-making and pathfinding.</li>
         </ul>
         <div class="entry-tags" aria-label="Technologies used">
           <span class="tag">NEAT</span>
@@ -332,29 +241,17 @@
         </div>
       </article>
 
-      <!-- 5 — IoT Aquaculture Telemetry -->
       <article class="entry">
         <div class="entry-header">
           <div>
-            <h3 class="entry-title">
-              IoT Telemetry System Integration for Aquaculture Metrics Monitoring
-            </h3>
+            <h3 class="entry-title">IoT Telemetry System Integration for Aquaculture Metrics Monitoring</h3>
             <p class="entry-subtitle">IoT Engineer</p>
           </div>
         </div>
         <ul class="entry-list">
-          <li>
-            Designed and configured sensor-based hardware architecture
-            to extract water quality metrics in real-time.
-          </li>
-          <li>
-            Built a stable data transmission pipeline and integrated
-            sensor data streams into a third-party web dashboard platform.
-          </li>
-          <li>
-            Ensured accurate and responsive environmental parameter
-            monitoring for pond ecosystems.
-          </li>
+          <li>Designed and configured sensor-based hardware architecture to extract water quality metrics in real-time.</li>
+          <li>Built a stable data transmission pipeline and integrated sensor data streams into a third-party web dashboard platform.</li>
+          <li>Ensured accurate and responsive environmental parameter monitoring for pond ecosystems.</li>
         </ul>
         <div class="entry-tags" aria-label="Technologies used">
           <span class="tag">IoT</span>
@@ -365,7 +262,6 @@
         </div>
       </article>
 
-      <!-- 6 — EEG Brain Signal Research -->
       <article class="entry">
         <div class="entry-header">
           <div>
@@ -375,16 +271,8 @@
           <span class="entry-badge">In Progress</span>
         </div>
         <ul class="entry-list">
-          <li>
-            Conducting exploration and analysis of
-            <strong>Electroencephalography (EEG)</strong> data to
-            understand brain activity patterns.
-          </li>
-          <li>
-            Research focuses on signal preprocessing, spectral feature
-            extraction, and pattern classification using machine learning
-            methods.
-          </li>
+          <li>Conducting exploration and analysis of <strong>Electroencephalography (EEG)</strong> data to understand brain activity patterns.</li>
+          <li>Research focuses on signal preprocessing, spectral feature extraction, and pattern classification using machine learning methods.</li>
         </ul>
         <div class="entry-tags" aria-label="Technologies used">
           <span class="tag">EEG</span>
@@ -393,58 +281,44 @@
           <span class="tag">PSD Analysis</span>
         </div>
       </article>
-
     </section>
 
-
-    <!-- ── Final Project Plan ───────────────────────────────── -->
+    <!-- Final Project Plan -->
     <section id="fp-plan" class="cv-section" aria-labelledby="heading-fp">
-      <h2 class="section-heading" id="heading-fp">
-        Final Project Plan — Web Programming
-      </h2>
+      <h2 class="section-heading" id="heading-fp">Final Project Plan — Web Programming</h2>
 
       <article class="entry fp-entry">
         <h3 class="entry-title">Autonomous Medical Screening Kiosk Portal</h3>
         <p class="entry-desc">
-          A kiosk-based web application that leverages the
-          <strong>WebRTC</strong> API in the browser to capture audio and video
-          streams in <em>real-time</em>. The web acts as a
-          <strong>lightweight client</strong> that routes massive computational
-          loads to an AI server — powered by high-capacity local neural and
-          graphics processing units — to perform language model inference
-          and object detection.
+          A kiosk-based web application that leverages the <strong>WebRTC</strong>
+          API in the browser to capture audio and video streams in <em>real-time</em>.
+          The web acts as a <strong>lightweight client</strong> that routes massive
+          computational loads to an AI server — powered by high-capacity local neural
+          and graphics processing units — to perform language model inference and
+          object detection.
         </p>
 
-        <!-- Architecture Diagram (rendered as a 3-column flow) -->
-        <div class="fp-architecture" role="img" aria-label="System architecture diagram: Browser to Pipeline to AI Server">
+        <!-- Architecture flow diagram -->
+        <div class="fp-architecture" role="img"
+             aria-label="System architecture: Browser to Pipeline to AI Server">
           <div class="arch-step">
-            <div class="arch-icon">
-              <img src="img/icons/globe.svg" alt="" aria-hidden="true">
-            </div>
+            <div class="arch-icon"><img src="img/icons/globe.svg" alt="" aria-hidden="true"></div>
             <div>
               <h4>Front-End (Browser)</h4>
               <p>Kiosk interface accessing camera &amp; microphone via WebRTC API.</p>
             </div>
           </div>
-
           <span class="arch-arrow" aria-hidden="true">→</span>
-
           <div class="arch-step">
-            <div class="arch-icon">
-              <img src="img/icons/lightning.svg" alt="" aria-hidden="true">
-            </div>
+            <div class="arch-icon"><img src="img/icons/lightning.svg" alt="" aria-hidden="true"></div>
             <div>
               <h4>Data Pipeline</h4>
               <p>Audio/video transmission via WebSocket or WebRTC peer connection.</p>
             </div>
           </div>
-
           <span class="arch-arrow" aria-hidden="true">→</span>
-
           <div class="arch-step">
-            <div class="arch-icon">
-              <img src="img/icons/brain.svg" alt="" aria-hidden="true">
-            </div>
+            <div class="arch-icon"><img src="img/icons/brain.svg" alt="" aria-hidden="true"></div>
             <div>
               <h4>AI Server (Backend)</h4>
               <p>Language model inference and object detection using local GPU/NPU.</p>
@@ -461,14 +335,10 @@
       </article>
     </section>
 
-
-    <!-- ── Awards, Organizations & Recognition ──────────────── -->
+    <!-- Awards & Recognition -->
     <section id="awards" class="cv-section" aria-labelledby="heading-awards">
-      <h2 class="section-heading" id="heading-awards">
-        Awards, Organizations &amp; Recognition
-      </h2>
+      <h2 class="section-heading" id="heading-awards">Awards, Organizations &amp; Recognition</h2>
 
-      <!-- Awards List -->
       <div class="awards-list" role="list">
         <div class="award-item award-intl" role="listitem">
           <img src="img/icons/trophy.svg" alt="" class="award-icon" aria-hidden="true">
@@ -478,7 +348,6 @@
             <span class="award-level">International, 2025</span>
           </div>
         </div>
-
         <div class="award-item" role="listitem">
           <img src="img/icons/medal.svg" alt="" class="award-icon" aria-hidden="true">
           <div>
@@ -487,7 +356,6 @@
             <span class="award-level">National, 2025</span>
           </div>
         </div>
-
         <div class="award-item" role="listitem">
           <img src="img/icons/medal.svg" alt="" class="award-icon" aria-hidden="true">
           <div>
@@ -496,7 +364,6 @@
             <span class="award-level">National, 2025</span>
           </div>
         </div>
-
         <div class="award-item" role="listitem">
           <img src="img/icons/medal.svg" alt="" class="award-icon" aria-hidden="true">
           <div>
@@ -507,7 +374,6 @@
         </div>
       </div>
 
-      <!-- Intellectual Property -->
       <h3 class="subsection-heading">Intellectual Property</h3>
       <article class="entry">
         <div class="hki-item">
@@ -515,18 +381,13 @@
           <div>
             <strong>Copyright (Computer Program): TB-Vector</strong> —
             <em>Intelligent Software System for Spatial Tuberculosis Cough
-            Tracking using Direction of Arrival (DoA) and Inverse
-            Beamforming.</em>
+            Tracking using Direction of Arrival (DoA) and Inverse Beamforming.</em>
             <br>
-            <span class="hki-id">
-              Registered under the Ministry of Law and Human Rights
-              of Indonesia — ID: 000997340
-            </span>
+            <span class="hki-id">Registered under the Ministry of Law and Human Rights of Indonesia — ID: 000997340</span>
           </div>
         </div>
       </article>
 
-      <!-- Organizations -->
       <h3 class="subsection-heading">Organizations &amp; Recognition</h3>
       <article class="entry">
         <div class="entry-header">
@@ -543,29 +404,20 @@
           at the 2025 National KRAI.
         </p>
       </article>
-
       <div class="org-compact">
-        <p>
-          <strong>Scientific Speaker</strong> — GERIGI ITS
-          (Integrated Student Orientation), University Level, 2025
-        </p>
-        <p>
-          <strong>Technical Trainer</strong> — Programming Internship Program,
-          ITS Robotics Team (Robocon), University Level, 2025
-        </p>
+        <p><strong>Scientific Speaker</strong> — GERIGI ITS (Integrated Student Orientation), University Level, 2025</p>
+        <p><strong>Technical Trainer</strong> — Programming Internship Program, ITS Robotics Team (Robocon), University Level, 2025</p>
       </div>
     </section>
 
-
-    <!-- ── Technical Skills ─────────────────────────────────── -->
+    <!-- Skills -->
     <section id="skills" class="cv-section" aria-labelledby="heading-skills">
       <h2 class="section-heading" id="heading-skills">Technical Skills</h2>
 
       <div class="skills-row">
         <div class="skill-group">
           <h4 class="skill-label">
-            <img src="img/icons/code.svg" alt="" class="skill-label-icon" aria-hidden="true">
-            Languages
+            <img src="img/icons/code.svg" alt="" class="skill-label-icon" aria-hidden="true"> Languages
           </h4>
           <div class="skill-tags" role="list">
             <span class="tag" role="listitem">Python</span>
@@ -575,11 +427,9 @@
             <span class="tag" role="listitem">JavaScript</span>
           </div>
         </div>
-
         <div class="skill-group">
           <h4 class="skill-label">
-            <img src="img/icons/library.svg" alt="" class="skill-label-icon" aria-hidden="true">
-            Frameworks &amp; Libraries
+            <img src="img/icons/library.svg" alt="" class="skill-label-icon" aria-hidden="true"> Frameworks &amp; Libraries
           </h4>
           <div class="skill-tags" role="list">
             <span class="tag" role="listitem">PyTorch</span>
@@ -591,11 +441,9 @@
             <span class="tag" role="listitem">Streamlit</span>
           </div>
         </div>
-
         <div class="skill-group">
           <h4 class="skill-label">
-            <img src="img/icons/wrench.svg" alt="" class="skill-label-icon" aria-hidden="true">
-            Developer Tools
+            <img src="img/icons/wrench.svg" alt="" class="skill-label-icon" aria-hidden="true"> Developer Tools
           </h4>
           <div class="skill-tags" role="list">
             <span class="tag" role="listitem">Git</span>
@@ -610,43 +458,26 @@
 
   </main>
 
-
-  <!-- ============================================================
-       FOOTER
-       Repeats key contact links and shows copyright notice.
-       Uses <footer> semantic element for document-level metadata.
-       ============================================================ -->
+  <!-- Footer -->
   <footer id="contact" aria-label="Contact and footer">
     <div class="container footer-content">
       <div class="footer-links">
         <a href="mailto:henryalifian6@gmail.com" class="footer-item">
-          <img src="img/icons/email.svg" alt="" class="footer-icon" aria-hidden="true">
-          henryalifian6@gmail.com
+          <img src="img/icons/email.svg" alt="" class="footer-icon" aria-hidden="true"> henryalifian6@gmail.com
         </a>
         <a href="https://www.linkedin.com/in/mochammad-henry-alifian-717886326/"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="footer-item">
-          <img src="img/icons/linkedin.svg" alt="" class="footer-icon" aria-hidden="true">
-          LinkedIn
+           target="_blank" rel="noopener noreferrer" class="footer-item">
+          <img src="img/icons/linkedin.svg" alt="" class="footer-icon" aria-hidden="true"> LinkedIn
         </a>
         <a href="tel:+6282233541774" class="footer-item">
-          <img src="img/icons/phone.svg" alt="" class="footer-icon" aria-hidden="true">
-          +62 822 3354 1774
+          <img src="img/icons/phone.svg" alt="" class="footer-icon" aria-hidden="true"> +62 822 3354 1774
         </a>
       </div>
-      <p class="footer-copy">
-        &copy; 2025 Mochammad Henry Alifian. Built with pure HTML &amp; CSS.
-      </p>
+      <p class="footer-copy">&copy; 2025 Mochammad Henry Alifian. Built with pure HTML &amp; CSS.</p>
     </div>
   </footer>
 
-
-  <!-- ============================================================
-       SCRIPTS
-       Minimal JS for mobile navigation toggle only.
-       No external dependencies required.
-       ============================================================ -->
+  <!-- Mobile nav toggle -->
   <script>
     (function () {
       var toggle = document.getElementById('navToggle');
