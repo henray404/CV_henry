@@ -228,6 +228,7 @@ img {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: 55% center; 
   border: 3px solid var(--border-default);
   transition: border-color var(--speed), transform var(--speed);
 }
